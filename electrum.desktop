@@ -1,0 +1,22 @@
+# If you want Electrum to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install electrum.desktop
+
+[Desktop Entry]
+Comment=Lightweight Baricoin Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-bari %u"
+GenericName[en_US]=Baricoin Wallet
+GenericName=Baricoin Wallet
+Icon=electrum
+Name[en_US]=Electrum Baricoin Wallet
+Name=Electrum Baricoin Wallet
+Categories=Finance;Network;
+StartupNotify=true
+StartupWMClass=electrum
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/baricoin;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\"; electrum-bari --testnet %u"
+Name=Testnet mode
